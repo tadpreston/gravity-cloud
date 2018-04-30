@@ -1,1 +1,42 @@
-{{outlet}}
+<div class="row">
+  <form class="col s4 offset-s4" {{action "login" on="submit"}}>
+    <h3>LOG IN</h3>
+    {{#if loginFailed}}
+      <div class="alert">Invalid username or password.</div>
+    {{/if}}
+    <div class="row">
+      <div class="input-field col s12">
+        {{input type="text"}}
+        <label for="username">Username</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        {{input type="password"}}
+        <label for="password">Password</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <button type="submit" class="btn red">Log In</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <p>
+          {{#link-to "terms-of-use" class="terms"}}
+            Terms of Use
+          {{/link-to}}
+        </p>
+        <p>
+          {{#link-to "forgotten-password" class="forgot"}}
+            Forgot Password
+          {{/link-to}}
+        </p>
+      </div>
+    </div>
+  </form>
+</div>
