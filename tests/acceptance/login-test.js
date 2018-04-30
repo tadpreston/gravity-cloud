@@ -22,21 +22,21 @@ module('Acceptance | login', function(hooks) {
   // test('should show error message if login credentials invalid', async (assert) => {
   // });
 
-  // test('should link to sign up form', async (assert) => {
-  //   await visit('/login');
-  //   await click('.register');
-  //   assert.equal(currentURL(), 'https://www.assetpanda.com/register-free/', 'should navigate to sign up form');
-  // });
+  test('should link to sign up form', async (assert) => {
+    await visit('/login');
+    await click(".register");
+    assert.equal(currentURL(), '/register', 'should navigate to sign up form');
+  });
   
-  // test('should link to terms of use form', async (assert) => {
-  //   await visit('/login');
-  //   await click('.terms');
-  //   assert.equal(currentURL(), 'https://www.assetpanda.com/terms-of-use/', 'should navigate to terms of use form');
-  // });
+  test('should link to terms of use form', async (assert) => {
+    await visit('/login');
+    await click('.terms');
+    assert.equal(currentURL(), '/terms-of-use', 'should navigate to terms of use form');
+  });
   
-  // test('should link to forgot password form', async (assert) => {
-  //   await visit('/login');
-  //   await click('.forgot');
-  //   assert.equal(currentURL(), 'https://login.assetpanda.com/users/password/new', 'should navigate to forgot password form');
-  // });
+  test('should link to forgot password form', async (assert) => {
+    await visit('/login');
+    await click('.forgot');
+    assert.equal(currentURL(), '/forgotten-password', 'should navigate to forgot password form');
+  });
 });
