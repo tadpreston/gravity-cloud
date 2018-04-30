@@ -1,1 +1,35 @@
-{{outlet}}
+<div class="row">
+  <form class="col s4 offset-s4" {{action "login" on="submit"}}>
+    <h3>LOG IN</h3>
+    {{#if loginFailed}}
+      <div class="alert">Invalid username or password.</div>
+    {{/if}}
+    <div class="row">
+      <div class="input-field col s12">
+        {{input value=username type="text"}}
+        <label for="username">Username</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        {{input value=password type="password"}}
+        <label for="password">Password</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <button type="submit" class="btn red">Log in!</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <p><a href="https://www.assetpanda.com/terms-of-use/">Terms of Use</a></p>
+
+        <p><a href="https://login.assetpanda.com/users/password/new">Forgot Password</a></p>
+      </div>
+    </div>
+  </form>
+</div>
