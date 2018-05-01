@@ -1,9 +1,9 @@
 <div class="navbar-fixed">
 <nav>
   <div class="light-blue lighten-1 nav-wrapper">
-    <a id="logo-container" href="/login" class="brand-logo left">
-      <img src="assets/images/logo.png" >
-    </a>
+    {{#link-to "login" class="brand-logo login"}}
+      <img src="assets/images/logo.png" alt="panda-logo-nav">
+    {{/link-to}}
 
     <ul id="nav-info" class="right">
       <li class="phone">(855) 898-6058</li>
