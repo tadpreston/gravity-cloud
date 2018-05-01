@@ -1,0 +1,16 @@
+.social-networks{
+  width: 35px;
+  height: 30px;
+  margin-left:5px;
+}
+
+.body{
+  min-height: 90vh;
+}
+
+#footer {
+  position: relative;
+  margin-top: -100px;
+  height: 100px;
+  clear: both;
+}
